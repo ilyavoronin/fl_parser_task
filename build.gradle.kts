@@ -2,6 +2,7 @@ plugins {
     java
     kotlin("jvm") version "1.3.72"
     id("antlr")
+    id("application")
 }
 
 group = "org.example"
@@ -14,7 +15,8 @@ repositories {
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
     antlr("org.antlr:antlr4:4.8")
-    testCompile("junit", "junit", "4.12")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.2")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.6.2")
 }
 
 configure<JavaPluginConvention> {
@@ -27,4 +29,12 @@ tasks {
     compileTestKotlin {
         kotlinOptions.jvmTarget = "1.8"
     }
+
+    test {
+        useJUnitPlatform()
+    }
+}
+
+application {
+    mainClassName = "LauncherKt"
 }
