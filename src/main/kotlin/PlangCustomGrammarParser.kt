@@ -14,7 +14,7 @@ class PlangCustomGrammarParser(tokenStream: TokenStream): PlangGrammarParser(tok
 
     fun parseProg(): Program {
         val progVisitor = ProgramVisitor()
-        return progVisitor.visit(this.prog())
+        return progVisitor.visit(this.start())
     }
 
     private class ProgramVisitor: PlangGrammarBaseVisitor<Program>() {

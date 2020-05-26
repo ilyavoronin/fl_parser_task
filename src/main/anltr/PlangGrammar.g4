@@ -19,6 +19,6 @@ rhead: atom ;
 rbody: (atom ',')* atom;
 rrule: rhead ('->' rbody)? '.';
 
-tar: (atom ',')* atom '.';
+tar: ((atom ',')* atom)? '.';
 
 prog: rrule* '-?' tar ;

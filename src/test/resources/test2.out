@@ -1,0 +1,60 @@
+Program with 3 relations:
+    [1]relation `rt34yu2` with 3 rules:
+        [1]rule with head 
+            atom `rt34yu2` with 5 arguments:
+                [1]variable `A`
+                [2]variable `B`
+                [3]variable `C`
+                [4]variable `D`
+                [5]variable `F`
+        with body of size 3
+            [1]atom `abaca32ba` with 1 arguments:
+                [1]atom `abacaba` without arguments
+            [2]atom `daba23da21ba` with 3 arguments:
+                [1]variable `A`
+                [2]variable `C`
+                [3]variable `B`
+            [3]atom `lalal23ala` with 4 arguments:
+                [1]atom `lalala` with 1 arguments:
+                    [1]atom `alal23al` with 1 arguments:
+                        [1]atom `lalala` with 1 arguments:
+                            [1]atom `alalala` without arguments
+                [2]variable `F`
+                [3]variable `G`
+                [4]variable `H7`
+        [2]rule with head 
+            atom `rt34yu2` with 3 arguments:
+                [1]variable `A`
+                [2]variable `B`
+                [3]variable `C`
+        with empty body
+        [3]rule with head 
+            atom `rt34yu2` with 3 arguments:
+                [1]atom `aba` with 1 arguments:
+                    [1]atom `caba` with 1 arguments:
+                        [1]variable `D`
+                [2]atom `dfsds` without arguments
+                [3]variable `Fdddddd`
+        with empty body
+    [2]relation `aba` with 3 rules:
+        [1]rule with head 
+            atom `aba` without arguments
+        with empty body
+        [2]rule with head 
+            atom `aba` without arguments
+        with empty body
+        [3]rule with head 
+            atom `aba` without arguments
+        with body of size 1
+            [1]atom `caba` with 1 arguments:
+                [1]variable `F`
+    [3]relation `caba` with 2 rules:
+        [1]rule with head 
+            atom `caba` with 1 arguments:
+                [1]variable `DABA`
+        with empty body
+        [2]rule with head 
+            atom `caba` with 1 arguments:
+                [1]variable `ABA`
+        with empty body
+with empty target

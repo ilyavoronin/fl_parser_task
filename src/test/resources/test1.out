@@ -1,0 +1,55 @@
+Program with 3 relations:
+    [1]relation `aba` with 3 rules:
+        [1]rule with head 
+            atom `aba` with 3 arguments:
+                [1]atom `cab` with 3 arguments:
+                    [1]atom `a` without arguments
+                    [2]atom `b` without arguments
+                    [3]atom `c` without arguments
+                [2]variable `F`
+                [3]atom `d` with 1 arguments:
+                    [1]atom `a` with 1 arguments:
+                        [1]atom `b` without arguments
+        with body of size 3
+            [1]atom `cab` without arguments
+            [2]atom `a` without arguments
+            [3]atom `aba` with 2 arguments:
+                [1]atom `a` without arguments
+                [2]variable `Cab`
+        [2]rule with head 
+            atom `aba` without arguments
+        with body of size 1
+            [1]atom `caba` without arguments
+        [3]rule with head 
+            atom `aba` without arguments
+        with body of size 1
+            [1]atom `daba` without arguments
+    [2]relation `daba` with 2 rules:
+        [1]rule with head 
+            atom `daba` without arguments
+        with empty body
+        [2]rule with head 
+            atom `daba` without arguments
+        with body of size 1
+            [1]atom `laba` without arguments
+    [3]relation `laba` with 1 rules:
+        [1]rule with head 
+            atom `laba` without arguments
+        with body of size 1
+            [1]atom `qwerty` with 2 arguments:
+                [1]atom `qwerty` without arguments
+                [2]atom `qwerty` without arguments
+with target:
+    [1]atom `aba` with 1 arguments:
+        [1]atom `caba` without arguments
+    [2]atom `caba` with 3 arguments:
+        [1]atom `aba` with 2 arguments:
+            [1]atom `a` with 1 arguments:
+                [1]atom `b` with 2 arguments:
+                    [1]atom `c` with 1 arguments:
+                        [1]atom `d` without arguments
+                    [2]atom `e` with 1 arguments:
+                        [1]variable `G`
+            [2]variable `G`
+        [2]variable `F`
+        [3]variable `F`
