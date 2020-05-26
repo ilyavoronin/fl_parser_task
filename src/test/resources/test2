@@ -1,4 +1,4 @@
- rt34yu2(A, B, C, D, F) ->
+ rt34yu2(A, B, C, D, F) :-
     abaca32ba(abacaba),
     daba23da21ba(A, C, B),
     lalal23ala(lalala(alal23al(lalala(alalala))), F, G, H7).
@@ -11,10 +11,10 @@ rt34yu2(
 
 aba.
 aba.
-aba -> caba(F).
+aba :- caba(F).
 
 caba(DABA).
 caba(ABA).
 
--?.
+?-.
 

@@ -14,9 +14,9 @@ class ParserTests {
     @Test
     fun simpleTest1() {
         val inputString = """
-            abacaba(aba, F, caba(F)) -> aba, caba(F).
+            abacaba(aba, F, caba(F)) :- aba, caba(F).
             abacaba.
-            -?
+            ?-
             abacaba(F), aba.
         """.trimIndent()
         val expected = Program(
@@ -61,13 +61,13 @@ class ParserTests {
     @Test
     fun simpleTest2() {
         val inputString = """
-            aba -> daba.
+            aba :- daba.
             daba.
             aba.
             laba.
             aba.
             daba.
-            -?.
+            ?-.
         """.trimIndent()
 
         val expected = Program(
@@ -121,7 +121,7 @@ class ParserTests {
     fun testFail1() {
         val inputString = """
             aba(F(aba)).
-            -?.
+            ?-.
         """.trimIndent()
         assertThrows(PlangCustomGrammarParser.ParserException::class.java, {PlangParser().parse(inputString)})
     }
@@ -129,9 +129,9 @@ class ParserTests {
     @Test
     fun testFail2() {
         val inputString = """
-            aba -> caba.
-            daba -> laba.
-            -?
+            aba :- caba.
+            daba :- laba.
+            ?-
             aba.
             caba.
         """.trimIndent()
@@ -141,8 +141,8 @@ class ParserTests {
     @Test
     fun testFail3() {
         val inputString = """
-            aba() -> caba.
-            -?.
+            aba() :- caba.
+            ?-.
         """.trimIndent()
         assertThrows(PlangCustomGrammarParser.ParserException::class.java, {PlangParser().parse(inputString)})
     }
@@ -150,8 +150,8 @@ class ParserTests {
     @Test
     fun testFail4() {
         val inputString = """
-            Faba(caba) -> daba.
-            -?.
+            Faba(caba) :- daba.
+            ?-.
         """.trimIndent()
         assertThrows(PlangCustomGrammarParser.ParserException::class.java, {PlangParser().parse(inputString)})
     }

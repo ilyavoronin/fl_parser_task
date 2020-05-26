@@ -1,10 +1,10 @@
-aba(cab(a, b, c), F,d(a(b))) -> cab, a, aba(a, Cab).
+aba(cab(a, b, c), F,d(a(b))) :- cab, a, aba(a, Cab).
 daba.
-aba -> caba.
-laba -> qwerty(qwerty, qwerty).
-aba -> daba.
-daba -> laba.
--?
+aba :- caba.
+laba :- qwerty(qwerty, qwerty).
+aba :- daba.
+daba :- laba.
+?-
 aba(caba),
 caba(aba(a(b(c(d), e(G))), G), F, F). 
 

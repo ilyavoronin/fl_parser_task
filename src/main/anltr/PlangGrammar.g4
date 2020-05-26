@@ -17,8 +17,8 @@ atom: IDENT body=abody?;
 
 rhead: atom ;
 rbody: (atom ',')* atom;
-rrule: rhead ('->' rbody)? '.';
+rrule: rhead (':-' rbody)? '.';
 
 tar: ((atom ',')* atom)? '.';
 
-prog: rrule* '-?' tar ;
+prog: rrule* '?-' tar ;
