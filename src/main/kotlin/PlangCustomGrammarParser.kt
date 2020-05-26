@@ -1,11 +1,15 @@
-import org.antlr.v4.runtime.TokenStream
-import java.lang.Exception
+import org.antlr.v4.runtime.*
+
 
 class PlangCustomGrammarParser(tokenStream: TokenStream): PlangGrammarParser(tokenStream) {
+    init {
+        this.removeErrorListeners()
+        this.addErrorListener(VerboseListener())
+    }
+
     fun parseInput(): Program {
         val progVisitor = ProgramVisitor()
-        println(this.currentToken)
-        return progVisitor.visit(this.start()).also { println(this.currentToken) }
+        return progVisitor.visit(this.start())
     }
 
     fun parseProg(): Program {
@@ -22,6 +26,10 @@ class PlangCustomGrammarParser(tokenStream: TokenStream): PlangGrammarParser(tok
 
             val relations = rules.groupBy { it.head.name }.map {(name, rules) -> Relation(name, rules)}
             return Program(relations, target)
+        }
+
+        override fun visitStart(ctx: StartContext): Program {
+            return visit(ctx.prog())
         }
     }
 
@@ -60,6 +68,25 @@ class PlangCustomGrammarParser(tokenStream: TokenStream): PlangGrammarParser(tok
 
         override fun visitVar(ctx: VarContext): Arg {
             return Var(ctx.VAR().text)
+        }
+    }
+
+    class VerboseListener : BaseErrorListener() {
+        override fun syntaxError(
+            recognizer: Recognizer<*, *>,
+            offendingSymbol: Any,
+            line: Int, charPositionInLine: Int,
+            msg: String,
+            e: RecognitionException?
+        ) {
+            val stack: MutableList<String?> = (recognizer as Parser).ruleInvocationStack
+            stack.reverse()
+            System.err.println("rule stack: $stack")
+            System.err.println(
+                "line " + line + ":" + charPositionInLine + " at " +
+                        offendingSymbol + ": " + msg
+            )
+            throw ParserException("Failed to parse input")
         }
     }
 

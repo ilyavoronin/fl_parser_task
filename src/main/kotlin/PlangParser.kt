@@ -14,7 +14,7 @@ class PlangParser {
     fun parse(file: File): Program {
         val stream = CharStreams.fromStream(FileInputStream(file))
         val parser = getParser(stream)
-        return parser.parseProg()
+        return parser.parseInput()
     }
 
     private fun getParser(cstream: CharStream): PlangCustomGrammarParser {

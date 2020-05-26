@@ -1,4 +1,4 @@
-// Generated from /home/ilya/hw/formal_lang/fl_task/src/main/java/PlangGrammar.g4 by ANTLR 4.8
+// Generated from /home/ilya/hw/formal_lang/fl_task/src/main/anltr/PlangGrammar.g4 by ANTLR 4.8
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;

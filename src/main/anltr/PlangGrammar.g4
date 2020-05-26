@@ -8,8 +8,7 @@ IDENT  : LLET (LET | DIGIT)* ;
 VAR    : ULET (LET | DIGIT)* ;
 WS     : [ \t\r\n]+ -> skip ;
 
-eof : EOF;
-start : prog eof;
+start : prog EOF;
 
 var: VAR;
 arg: atom | var ;

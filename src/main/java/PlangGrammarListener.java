@@ -1,4 +1,4 @@
-// Generated from /home/ilya/hw/formal_lang/fl_task/src/main/java/PlangGrammar.g4 by ANTLR 4.8
+// Generated from /home/ilya/hw/formal_lang/fl_task/src/main/anltr/PlangGrammar.g4 by ANTLR 4.8
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
@@ -6,16 +6,6 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  * {@link PlangGrammarParser}.
  */
 public interface PlangGrammarListener extends ParseTreeListener {
-	/**
-	 * Enter a parse tree produced by {@link PlangGrammarParser#eof}.
-	 * @param ctx the parse tree
-	 */
-	void enterEof(PlangGrammarParser.EofContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link PlangGrammarParser#eof}.
-	 * @param ctx the parse tree
-	 */
-	void exitEof(PlangGrammarParser.EofContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link PlangGrammarParser#start}.
 	 * @param ctx the parse tree

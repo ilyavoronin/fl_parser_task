@@ -1,4 +1,4 @@
-// Generated from /home/ilya/hw/formal_lang/fl_task/src/main/java/PlangGrammar.g4 by ANTLR 4.8
+// Generated from /home/ilya/hw/formal_lang/fl_task/src/main/anltr/PlangGrammar.g4 by ANTLR 4.8
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
 /**
@@ -10,13 +10,6 @@ import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
  * operations with no return type.
  */
 public class PlangGrammarBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements PlangGrammarVisitor<T> {
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */
-	@Override public T visitEof(PlangGrammarParser.EofContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *

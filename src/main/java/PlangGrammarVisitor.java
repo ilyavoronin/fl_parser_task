@@ -1,4 +1,4 @@
-// Generated from /home/ilya/hw/formal_lang/fl_task/src/main/java/PlangGrammar.g4 by ANTLR 4.8
+// Generated from /home/ilya/hw/formal_lang/fl_task/src/main/anltr/PlangGrammar.g4 by ANTLR 4.8
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
@@ -9,12 +9,6 @@ import org.antlr.v4.runtime.tree.ParseTreeVisitor;
  * operations with no return type.
  */
 public interface PlangGrammarVisitor<T> extends ParseTreeVisitor<T> {
-	/**
-	 * Visit a parse tree produced by {@link PlangGrammarParser#eof}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitEof(PlangGrammarParser.EofContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link PlangGrammarParser#start}.
 	 * @param ctx the parse tree
