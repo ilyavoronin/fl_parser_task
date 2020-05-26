@@ -13,7 +13,7 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
-    antlr("org.antlr:antlr4:4.5.3")
+    antlr("org.antlr:antlr4:4.8")
     testCompile("junit", "junit", "4.12")
 }
 
